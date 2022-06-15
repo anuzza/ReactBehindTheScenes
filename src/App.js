@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import DemoOutput from './Components/Demo/DemoOutput';
 import Button from './Components/UI/Button/Button';
 
 function App() {
@@ -14,8 +15,11 @@ function App() {
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      {btnClicked && <p>This is new!</p>}
-      <Button onClick = {onClickHandler}>Show paragraph! </Button>
+      <DemoOutput show= {btnClicked}/>
+
+
+      {/* {btnClicked && <p>This is new!</p>}
+      <Button onClick = {onClickHandler}>Show paragraph! </Button> */}
     </div>
   );
 }
