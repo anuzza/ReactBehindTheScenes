@@ -16,6 +16,7 @@ function App() {
     <div className="app">
       <h1>Hi there!</h1>
       <DemoOutput show= {btnClicked}/>
+      <Button onClick={onClickHandler}>Show paragraph!</Button>
 
 
       {/* {btnClicked && <p>This is new!</p>}
