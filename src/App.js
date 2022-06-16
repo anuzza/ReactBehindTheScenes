@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import './App.css';
 import DemoOutput from './Components/Demo/DemoOutput';
 import Button from './Components/UI/Button/Button';
 
 function App() {
   const [btnClicked, setBtnClicked]= useState(false);
+  console.log('APP RUNNING');
 
-  const onClickHandler = ()=>{
+  const onClickHandler = useCallback(()=>{
     setBtnClicked((prevShow)=>!prevShow);
 
-  }
+  });
   
 
   return (
