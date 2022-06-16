@@ -7,16 +7,26 @@ function App() {
   const [btnClicked, setBtnClicked]= useState(false);
   console.log('APP RUNNING');
 
-  const onClickHandler = useCallback(()=>{
-    setBtnClicked((prevShow)=>!prevShow);
+  const[allowToggle, setAllowToggle]= useState(false);
 
-  });
+  const onClickHandler = useCallback(()=>{
+    if(allowToggle){
+    setBtnClicked((prevShow)=>!prevShow);
+    }
+
+  }, [allowToggle]);
+
+  const allowToggleHandler=()=>{
+    setAllowToggle(true);
+  }
   
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      <DemoOutput show= {false}/>      <Button onClick={onClickHandler}>Show paragraph!</Button>
+      <DemoOutput show= {false}/> 
+      <Button onClick={allowToggleHandler}>Allow Toggle</Button>     <Button onClick={onClickHandler}>Show paragraph!</Button>
+
 
 
       {/* {btnClicked && <p>This is new!</p>}
