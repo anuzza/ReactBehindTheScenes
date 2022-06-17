@@ -15,6 +15,7 @@ function App() {
     }
 
   }, [allowToggle]);
+  //dependencies
 
   const allowToggleHandler=()=>{
     setAllowToggle(true);
